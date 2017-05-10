@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <link rel="stylesheet" href="./FlipClock/compiled/flipclock.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="./FlipClock/compiled/flipclock.js"></script>
+  <meta charset="UTF-8">
+  <title>Bear Grylls Sírna v2.0</title>
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body data-vide-bg="trailer" style="font-family: 'Helvetica'">
+  <div id="placeholder" style="width:100%;height:100%;background-color: black;opacity: 0.85;font-family: Helvetica"></div>
+<table align="center" style="margin:0 auto;width:35%;height: 70%;position: absolute;top: 0;left: 32.5%;">
+  <tr><td></td></tr><tr><td><center><font color="white" size="20">Bear Grylls Sírna v2.0</font></center></td></tr>
+
+
+  <tr><td><div class="clock"></div></td></tr>
+  <tr><td></td></tr>
+
+</table>
+<div align="center" style="margin:0 auto;width:66%;height: 15%;position: absolute;top: 85%;left: 18%;font-family: 'Helvetica';"><font color="white">Üdv!
+Mint tudjátok a Bear Grylls Sírna Rust szerver DDOS támadások miatt leállt.A jelenlegi tulaj nem kívánja tovább futtatni a szervert.
+Mi,a ti támogatásotoknak is köszönhetően,elindítjuk újra a szervert május 12.én 17:00-kor.
+A szerver most wipeolva lesz, és ettől kezdve a már megszokott 2 hetes időközönként lesz ismét (forced wipe-tól számitva).
+A szerver elindításán jelenleg is gőzerővel dolgozunk, hogy a hamisítatlan vanilla Rust élmény megmaradjon!
+Várunk minden régi és új játékost a szerveren!</font></div>
+  <script type="text/javascript">
+    var clock;
+
+    $(document).ready(function() {
+
+      var date = new Date(2017, 4	, 12, 17);
+	    var now = new Date();
+	    var diff = (date.getTime()/1000) - (now.getTime()/1000);
+
+      // Instantiate a coutdown FlipClock
+      clock = jQuery('.clock').FlipClock(diff, {
+        clockFace: 'DailyCounter',
+        countdown: true
+      });
+    });
+  </script>
+
+<script>window.jQuery || document.write('<script src="Vide/libs/jquery/dist/jquery.min.js"><\/script>')</script>
+<script src="Vide/src/jquery.vide.js"></script>
+<script>
+ // $(document).ready(function () {
+ //   $(document.body).vide('video/ocean'); // Non declarative initialization
+ //
+ //   var instance = $(document.body).data('vide'); // Get the instance
+ //   var video = instance.getVideoObject(); // Get the video object
+ //   instance.destroy(); // Destroy instance
+ // });
+</script>
+
+
+</body>
+</html>
